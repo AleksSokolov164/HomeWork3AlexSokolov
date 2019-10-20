@@ -26,9 +26,7 @@ print(result) # [5, 1]
 В конце считаем количество правильных и неправильных ответов и предлагаем начать снова
 """
 print('Викторина. Знаете ли вы год рождения знаменитых русских композиторов?')
-answer = 'да'
-amount_answer = 5
-composer = ['Михаила Ивановича Глинки',
+сomposer = ['Михаила Ивановича Глинки',
             'Сергея Васильевича Рохманинова',
             'Петра Ильича Чайковского',
             'Дмитрия Дмитриевича Шостоковича',
@@ -61,6 +59,7 @@ month = [1,2,3,4,5,6,7,8,9,10,11,12]
 month2 = ['январь','февраль','март','апрель','май','июнь','июль','август','сентябрь','октябрь','ноябрь','декабрь']
 mm = dict(zip(month,month2))
 import random
+answer = 'да'
 number_of_questions = 5
 while answer=="да":
     result = random.sample(composer, number_of_questions)
@@ -72,7 +71,7 @@ while answer=="да":
             otvet_day = dd[int(str1[0])]
             otvet_month = mm[int(str1[1])]
             otvet_year = (str1[2])
-            print('Неверно! Правильный ответ: Lень рождения '+i+' '+otvet_day+' '+otvet_month+' '+otvet_year+' года')
+            print('Неверно! Правильный ответ: День рождения '+i+' '+otvet_day+' '+otvet_month+' '+otvet_year+' года')
         else:
             amount_answer_plus = amount_answer_plus+1
     print("Количество правильных ответов=", amount_answer_plus, "Количество неправильных ответов =", number_of_questions-amount_answer_plus)
